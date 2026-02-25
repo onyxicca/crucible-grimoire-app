@@ -31,7 +31,7 @@ html,body{height:100%;background:var(--ink);font-family:"EB Garamond",serif;colo
 .home-header{display:flex;flex-direction:column;align-items:center;gap:7px;padding:max(env(safe-area-inset-top),22px) 24px 0;width:100%;}
 .home-logo{width:96px;height:96px;object-fit:contain;}
 .app-title{font-family:"Cinzel Decorative",serif;font-size:clamp(13px,3.6vw,17px);color:var(--gold);letter-spacing:.1em;text-align:center;line-height:1.4;}
-.app-sub{font-family:"Cinzel",serif;font-size:7.5px;letter-spacing:.28em;color:rgba(201,168,76,.3);text-align:center;text-transform:uppercase;}
+.app-sub{font-family:"Cinzel",serif;font-size:7.5px;letter-spacing:.28em;color:rgba(201,168,76,.55);text-align:center;text-transform:uppercase;}
 .app-tagline{font-family:"EB Garamond",serif;font-size:11px;font-style:italic;color:rgba(201,168,76,.22);text-align:center;}
 .h-rule{width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--gold-dim),transparent);margin:1px auto;}
 
@@ -388,7 +388,7 @@ html,body{height:100%;background:var(--ink);font-family:"EB Garamond",serif;colo
     </div>
     <div class="nav-tile" onclick="show('affFragSelect')">
       <div class="tc tl"></div><div class="tc br"></div>
-      <div class="nav-tile-icon">🌑</div>
+      <div class="nav-tile-icon">🧠</div>
       <div class="nav-tile-label">Affirmations</div>
       <div class="nav-tile-sublabel">The Rewiring</div>
     </div>
@@ -484,7 +484,7 @@ html,body{height:100%;background:var(--ink);font-family:"EB Garamond",serif;colo
       <div class="seal-glyph" id="sealGlyph">⚗️</div>
     </div>
     <div class="materia-info">
-      <div class="materia-label">Materia</div>
+      <div class="materia-label">Prima Materia</div>
       <div class="materia-count" id="materiaCount"></div>
       <div class="materia-ledger" id="materiaLedger"></div>
     </div>
@@ -605,8 +605,7 @@ const QUESTS = [
       { name:"Read the Terrain", lore:"The Unfinished do not arrive in the Between with maps. They arrive and learn to see clearly.", obj:"Spend 5 minutes standing somewhere outside or near a window. Look at what is actually there, not what you wish were there. Notice three things you have been filtering out. No notes required.", reward:"Clarity is the first tool. You now have it." },
       { name:"The Transmutation Log", lore:"In the Great Work, the alchemist records every attempt. What was offered. What it cost. What it returned. Nothing is wasted if it is witnessed.", obj:"For one week, pay attention to where your energy goes each day. At the end of the week, notice one pattern you did not expect. You do not need to track it formally. Just pay attention.", reward:"You cannot redirect energy you have not learned to see." },
       { name:"Speak From the Between", lore:"The blood moon is only visible because the Earth does not hide where it stands. It witnesses from exactly where it is.", obj:"Tell one person something true about where you are right now. Not polished, not resolved. Just true. A voice note to yourself counts if that is all you can manage.", reward:"Speaking from the middle is not weakness. It is the practice itself." },
-      { name:"Blood Moon Witness", lore:"You do not travel to witness the blood moon. You are already in the only place it becomes visible from. The middle was always the vantage point.", obj:"Identify one area where you have been waiting to reach the other side before acting. Do one small thing from exactly where you are today. Not from the resolved version of yourself. From this one.", reward:"The Between is not a waiting room. You just proved it." },
-    ,
+      { name:"Blood Moon Witness", lore:"You do not travel to witness the blood moon. You are already in the only place it becomes visible from. The middle was always the vantage point.", obj:"Identify one area where you have been waiting to reach the other side before acting. Do one small thing from exactly where you are today. Not from the resolved version of yourself. From this one.", reward:"The Between is not a waiting room. You just proved it." }
     ]
   },
   // ── FRAGMENT II QUESTS ── set locked:false, fill quests[] when ready
@@ -653,22 +652,22 @@ const LORE_FRAGMENTS = [
 // ══════════════════════════════════════
 const WORLD_ENTRIES = [
   {
-    id:"crucible", glyph:"🔥", title:"The Crucible",
+    id:"crucible", glyph:"♨️", title:"The Crucible",
     subtitle:"The Vessel of Transformation", locked:false,
     body:"The Crucible is the container. Not a place entered or exited. The whole of a life under conditions that demand transformation.\n\nEvery person alive is inside the Crucible already. The heat is already on. The question the Crucible asks is not whether change will come. It will. The question is whether one works with the process or spends all available Ember fighting it.\n\nThe Crucible does not care about readiness. It cares about presence."
   },
   {
-    id:"between", glyph:"⌛", title:"The Between",
+    id:"between", glyph:"🌗", title:"The Between",
     subtitle:"Territory Between Stages", locked:false,
     body:"The Between is the territory between stages of the Great Work. Every time one form of self dissolves and the next has not yet solidified, this is where the work takes place.\n\nIt is uncertain terrain. It is not comfortable. It is also the only place where real transformation happens. The Between is not the preamble to the story. It is where the story takes place.\n\nMost people spend enormous Ember trying to escape the Between. To land somewhere resolved. To feel finished. What this archive proposes is different: the Between is not the obstacle. It is where the work gets done."
   },
   {
-    id:"unfinished", glyph:"🌗", title:"The Unfinished",
+    id:"unfinished", glyph:"🌱", title:"The Unfinished",
     subtitle:"Those Who Work Without Resolution", locked:false,
     body:"Those who enter the Between knowingly are called the Unfinished. Not as insult. As title.\n\nThe Unfinished are not broken. They are mid-process. The alchemist mid-experiment. The story mid-chapter. The moon in the middle of its eclipse.\n\nThe Unfinished have chosen to move without certainty, to speak before resolution, to build without knowing the final shape. They have accepted that the middle counts. That showing up inside it is the work itself.\n\nIf you are here, you are one of them."
   },
   {
-    id:"ember", glyph:"🪔", title:"Ember",
+    id:"ember", glyph:"🔥", title:"Ember",
     subtitle:"Vital Energy of the Unfinished", locked:false,
     body:"Ember is the vital energy the Unfinished carry. It is finite. It is spent whether one acts or not, because waiting costs just as much as doing, only without the return.\n\nOne of the central practices of the Great Work is learning to read Ember honestly. Where it goes. What replenishes it. What drains it without giving anything back.\n\nThis is not a productivity system. It is a survival practice. Ember spent on the right things compounds. Ember spent fighting the wrong battles dissolves without trace."
   },
@@ -694,9 +693,9 @@ const WORLD_ENTRIES = [
   },
 
   {
-    id:"materia", glyph:"🪔", title:"Materia",
+    id:"materia", glyph:"🌪️", title:"Prima Materia",
     subtitle:"Raw Material of the Great Work", locked:false,
-    body:"Materia is what the alchemist brings to the Work. Not perfection. Not readiness. Raw material gathered through lived experience.\n\nIn this grimoire, Materia is earned by completing IRL Quests. One per quest, five per Fragment. That is the record that you went out into the world and did the thing.\n\nMateria accumulates across all Fragments. It never resets. Missing a Fragment does not erase what came before. Someone who joins at Fragment VI simply begins their record at Fragment VI. There is no catching up because there is no race.\n\nMateria is not currency. It cannot be traded. What it does is mark the record. The total at the end of the year is proof of how many times the Unfinished showed up and brought something real.\n\nThe grimoire does not reward performance. It rewards presence."
+    body:"Prima Materia is what the alchemist brings to the Work. Not perfection. Not readiness. Raw material gathered through lived experience.\n\nIn this grimoire, Prima Materia is earned by completing IRL Quests. One per quest, five per Fragment. That is the record that you went out into the world and did the thing.\n\nPrima Materia accumulates across all Fragments. It never resets. Missing a Fragment does not erase what came before. Someone who joins at Fragment VI simply begins their record at Fragment VI. There is no catching up because there is no race.\n\nPrima Materia is not currency. It cannot be traded. What it does is mark the record. The total at the end of the year is proof of how many times the Unfinished showed up and brought something real.\n\nThe grimoire does not reward performance. It rewards presence."
   },
   // ── FUTURE ENTRIES: add new world entries here as the year progresses ──
   // { id:"", glyph:"", title:"", subtitle:"", locked:true, body:"" },
@@ -766,8 +765,13 @@ function buildMechanics(){
 <div style="font-family:'Cinzel',serif;font-size:7px;letter-spacing:.22em;color:var(--blood);text-transform:uppercase;margin:18px 0 6px;">The Great Work</div>
 <p style="margin-bottom:14px;">Three written prompts per Fragment. These are for reflection. Write as little or as much as you want. Your responses are saved privately on your device and export to the PDF grimoire.</p>
 
-<div style="font-family:'Cinzel',serif;font-size:7px;letter-spacing:.22em;color:var(--blood);text-transform:uppercase;margin:18px 0 6px;">Materia 🪔</div>
-<p style="margin-bottom:14px;">Materia is gathered by completing quests (1 each) and saving Great Work responses (1 each, first time only). Five quests plus three prompts equals eight possible Materia per Fragment. Materia never resets. It accumulates across the full year as a personal record of the Work. It cannot be spent and nothing is gated behind it. It simply marks how many times you showed up.</p>
+<div style="font-family:'Cinzel',serif;font-size:7px;letter-spacing:.22em;color:var(--blood);text-transform:uppercase;margin:18px 0 6px;">How to Access This Grimoire</div>
+<p style="margin-bottom:14px;">This grimoire is subscriber-only, but it is free. To access it, you must be subscribed to the newsletter at onyxicca.com. Every month, the newsletter contains a riddle. The answer to that riddle is the key that opens this grimoire. If you can answer it, you have read the Fragment. That is the only requirement. Think of it like a hidden door in a Soulslike game. The door is always there. The key is in the lore. You just have to read.</p>
+
+<p style="margin-bottom:14px;">Free subscribers on the Prima Materia tier have full access to the app every month as long as they continue reading the newsletter. Higher tiers on Fourthwall unlock additional content such as early access audio and physical grimoire pages, but the app itself is never paywalled. Presence is the only currency.</p>
+
+<div style="font-family:'Cinzel',serif;font-size:7px;letter-spacing:.22em;color:var(--blood);text-transform:uppercase;margin:18px 0 6px;">Prima Materia</div>
+<p style="margin-bottom:14px;">Prima Materia is gathered by completing IRL Quests (1 per quest, 5 per Fragment). It never resets and accumulates across the full year as a personal record of the Work. It cannot be spent and nothing is gated behind it. It simply marks how many times you showed up and did the thing.</p>
 
 <div style="font-family:'Cinzel',serif;font-size:7px;letter-spacing:.22em;color:var(--blood);text-transform:uppercase;margin:18px 0 6px;">Affirmations</div>
 <p style="margin-bottom:14px;">Thirty affirmations per Fragment. Read them in the app with the sleep mode (tap the moon icon on the affirmations screen), or download the extended audio version from Fourthwall.</p>
@@ -932,9 +936,9 @@ function updateSeal(fragId){
   if(glyph)glyph.textContent=totalEarned>=totalMax?'✨':totalEarned>=totalMax/2?'🌗':'⚗️';
   // Count text
   const cnt=document.getElementById('materiaCount');
-  if(cnt)cnt.textContent=totalEarned===totalMax?'All gathered this Fragment':totalEarned===0?'':''+totalEarned+' of '+totalMax+' gathered';
+  if(cnt)cnt.textContent=totalEarned===totalMax?'All quests complete':totalEarned===0?'':''+totalEarned+' of '+totalMax+' quests complete';
   const led=document.getElementById('materiaLedger');
-  if(led&&totalAll>0)led.textContent=totalAll+' total';
+  if(led&&totalAll>0)led.textContent=totalAll+' prima materia total';
   else if(led)led.textContent='';
 }
 
@@ -1100,9 +1104,9 @@ function saveEntry(type,fragment,i){
         }
         // update home ledger
         const hl=document.getElementById("homeLedger");
-        if(hl){const t=getTotalMateria();if(t>0)hl.textContent="Materia: "+t+" Materia gathered";}
+        if(hl){const t=getTotalMateria();if(t>0)hl.textContent="Prima Materia: "+t+" gathered";}
         // flash saved msg with materia note
-        msg.textContent="Saved. 🪔 +1 Materia";
+        msg.textContent="Saved. 🌪️ +1 Prima Materia";
         setTimeout(()=>{msg.textContent="Saved.";},2200);
       }
     }catch(e){}
