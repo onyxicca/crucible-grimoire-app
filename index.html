@@ -400,7 +400,7 @@ html,body{height:100%;background:var(--ink);font-family:"EB Garamond",serif;colo
     </div>
     <div class="nav-tile" onclick="show('grimoireScreen')">
       <div class="tc tl"></div><div class="tc br"></div>
-      <div class="nav-tile-icon">🜁</div>
+      <div class="nav-tile-icon">☀️</div>
       <div class="nav-tile-label">The Great Work</div>
       <div class="nav-tile-sublabel">The Process</div>
     </div>
@@ -602,7 +602,7 @@ const QUESTS = [
     fragment:1, label:"Fragment I · The Omen", locked:false,
     quests:[
       { name:"Light the First Ember", lore:"Before any journey through the Between can begin, something must be offered. Not a perfect flame. Just what you carry.", obj:"Choose one thing you have been postponing until conditions felt right. Set a timer for 10 minutes. Begin it now, imperfectly, exactly as you are. Do not plan first. Just start.", reward:"You break the seal. The way forward reveals itself." },
-      { name:"Read the Terrain", lore:"The Unfinished do not arrive in the Between with maps. They arrive and learn to see clearly.", obj:"Spend 5 minutes standing somewhere outside or near a window. Look at what is actually there, not what you wish were there. Notice three things you have been filtering out. No notes required.", reward:"Clarity is the first tool. You now have it." },
+      { name:"Read the Terrain", lore:"The Embers do not arrive in the Between with maps. They arrive and learn to see clearly.", obj:"Spend 5 minutes standing somewhere outside or near a window. Look at what is actually there, not what you wish were there. Notice three things you have been filtering out. No notes required.", reward:"Clarity is the first tool. You now have it." },
       { name:"The Transmutation Log", lore:"In the Great Work, the alchemist records every attempt. What was offered. What it cost. What it returned. Nothing is wasted if it is witnessed.", obj:"For one week, pay attention to where your energy goes each day. At the end of the week, notice one pattern you did not expect. You do not need to track it formally. Just pay attention.", reward:"You cannot redirect energy you have not learned to see." },
       { name:"Speak From the Between", lore:"The blood moon is only visible because the Earth does not hide where it stands. It witnesses from exactly where it is.", obj:"Tell one person something true about where you are right now. Not polished, not resolved. Just true. A voice note to yourself counts if that is all you can manage.", reward:"Speaking from the middle is not weakness. It is the practice itself." },
       { name:"Blood Moon Witness", lore:"You do not travel to witness the blood moon. You are already in the only place it becomes visible from. The middle was always the vantage point.", obj:"Identify one area where you have been waiting to reach the other side before acting. Do one small thing from exactly where you are today. Not from the resolved version of yourself. From this one.", reward:"The Between is not a waiting room. You just proved it." }
@@ -659,17 +659,17 @@ const WORLD_ENTRIES = [
   {
     id:"between", glyph:"🌗", title:"The Between",
     subtitle:"Territory Between Stages", locked:false,
-    body:"The Between is the territory between stages of the Great Work. Every time one form of self dissolves and the next has not yet solidified, this is where the work takes place.\n\nIt is uncertain terrain. It is not comfortable. It is also the only place where real transformation happens. The Between is not the preamble to the story. It is where the story takes place.\n\nMost people spend enormous Ember trying to escape the Between. To land somewhere resolved. To feel finished. What this archive proposes is different: the Between is not the obstacle. It is where the work gets done."
+    body:"The Between is the territory between stages of the Great Work. Every time one form of self dissolves and the next has not yet solidified, this is where the work takes place.\n\nIt is uncertain terrain. It is not comfortable. It is also the only place where real transformation happens. The Between is not the preamble to the story. It is where the story takes place.\n\nMost people spend enormous Flow trying to escape the Between. To land somewhere resolved. To feel finished. What this archive proposes is different: the Between is not the obstacle. It is where the work gets done."
   },
   {
-    id:"unfinished", glyph:"🌱", title:"The Unfinished",
-    subtitle:"Those Who Work Without Resolution", locked:false,
-    body:"Those who enter the Between knowingly are called the Unfinished. Not as insult. As title.\n\nThe Unfinished are not broken. They are mid-process. The alchemist mid-experiment. The story mid-chapter. The moon in the middle of its eclipse.\n\nThe Unfinished have chosen to move without certainty, to speak before resolution, to build without knowing the final shape. They have accepted that the middle counts. That showing up inside it is the work itself.\n\nIf you are here, you are one of them."
+    id:"unfinished", glyph:"🔥", title:"The Embers",
+    subtitle:"Those Who Enter the Crucible", locked:false,
+    body:"Those who enter the Crucible knowingly are called the Embers. Not as metaphor. As title.\n\nEmbers are not ash and they are not flame. They are the in-between state. Still burning. Not yet blazing. Formed by heat, not destroyed by it.\n\nThe Embers have chosen to move without certainty, to speak before resolution, to build without knowing the final shape. They have accepted that the middle counts. That showing up inside the heat is the Work itself.\n\nIf you are here, you are one of them."
   },
   {
-    id:"ember", glyph:"🔥", title:"Ember",
-    subtitle:"Vital Energy of the Unfinished", locked:false,
-    body:"Ember is the vital energy the Unfinished carry. It is finite. It is spent whether one acts or not, because waiting costs just as much as doing, only without the return.\n\nOne of the central practices of the Great Work is learning to read Ember honestly. Where it goes. What replenishes it. What drains it without giving anything back.\n\nThis is not a productivity system. It is a survival practice. Ember spent on the right things compounds. Ember spent fighting the wrong battles dissolves without trace."
+    id:"ember", glyph:"🌀", title:"Flow",
+    subtitle:"Vital Capacity of the Embers", locked:false,
+    body:"Flow is the capacity the Embers carry into the Work. It is not infinite. It depletes in the doing, but also in the waiting, because waiting without movement costs just as much as action, only without the return.\n\nFlow is not mystical. It is not a spiritual force. It is the lived, finite capacity to show up, create, and move through resistance. The alchemist who ignores their Flow does not produce more Work. They produce less.\n\nOne of the central practices of the Great Work is learning to read Flow honestly. Where it goes. What replenishes it. What drains it without giving anything back.\n\nThe Flasks exist for this reason. The Flask of Flowing Focus replenishes mental Flow, the kind spent on sustained concentration and creative work. The Flask of Flowing Vigor replenishes physical Flow, the kind spent in sustained effort and the long exertion of showing up when it costs something.\n\nThis is not a productivity system. It is a survival practice. Flow spent on the right things compounds. Flow spent fighting the wrong battles dissolves without trace."
   },
   {
     id:"thresholds", glyph:"🚪", title:"Thresholds",
@@ -677,25 +677,25 @@ const WORLD_ENTRIES = [
     body:"Thresholds are the points of passage between one stage of the Great Work and the next. They are not enemies to defeat. They are tests of readiness.\n\nA Threshold does not ask whether one is perfect. It asks whether one is willing to leave the last stage behind in order to move into the next one.\n\nSome Thresholds are external events that arrive without warning. Some are internal realizations that have been circling for months. All of them require releasing something in order to pass through.\n\nThe Threshold only appears when one is close enough to matter. It is not a sign to stop. It is the sign that something real is being forged."
   },
   {
-    id:"greatwork", glyph:"⚗️", title:"The Great Work",
+    id:"greatwork", glyph:"☀️", title:"The Great Work",
     subtitle:"Magnum Opus — 3 Phases, 7 Stages", locked:false,
     body:"In classical alchemy, the Magnum Opus was the process of transmuting base material into its highest form. It moved through 3 phases and 7 stages. It was never fast. It required heat, patience, and the willingness to stay present through each stage without skipping ahead.\n\nThe three phases are Nigredo (dissolution and burning away), Albedo (purification and reflection), and Rubedo (integration and completion).\n\nThe seven stages are Calcination, Dissolution, Separation, Conjunction, Fermentation, Distillation, and Coagulation.\n\nThe Great Work of this archive moves through those same phases across the full year of Fragments. Each Fragment is assigned to a specific stage. Together they form a complete system for transmuting the chaos of the Between into something real."
   },
   {
     id:"flasks", glyph:"🧪", title:"The Flasks",
-    subtitle:"Ember Vessels of the Unfinished", locked:false,
-    body:"The Unfinished carry two vessels through the Between.\n\nThe Flask of Flowing Focus carries mental Ember, the kind spent on sustained concentration, creative work, and long engagement with difficult ideas. The liquid within does not force alertness. It preserves flow over time, allowing thought to remain stable when clarity is most at risk of slipping.\n\nThe Flask of Flowing Vigor carries physical Ember, the kind spent in sustained effort and the long exertion of showing up when it costs something. Unlike remedies for moments of crisis, this flask is used to maintain the body through continued action, when recovery must happen alongside the work rather than after it.\n\nBoth flasks appear in this archive as real objects. Their purpose in the world of the Between is the same as their purpose in the world one actually inhabits."
+    subtitle:"Ember Vessels of the Embers", locked:false,
+    body:"The Embers carry two vessels through the Between.\n\nThe Flask of Flowing Focus carries mental Flow, the kind spent on sustained concentration, creative work, and long engagement with difficult ideas. The liquid within does not force alertness. It preserves flow over time, allowing thought to remain stable when clarity is most at risk of slipping.\n\nThe Flask of Flowing Vigor carries physical Flow, the kind spent in sustained effort and the long exertion of showing up when it costs something. Unlike remedies for moments of crisis, this flask is used to maintain the body through continued action, when recovery must happen alongside the work rather than after it.\n\nBoth flasks appear in this archive as real objects. Their purpose in the world of the Between is the same as their purpose in the world one actually inhabits."
   },
   {
     id:"loredex", glyph:"📖", title:"Lore Codex",
     subtitle:"The In-World Encyclopedia", locked:false,
-    body:"In game development, a lore codex is the in-world encyclopedia. The reference document that holds all the rules, history, and meaning of an entire game world. Players consult it to understand what they are moving through, what the stakes are, what everything means.\n\nThis archive has one. The Between has rules. The Great Work has stages. The Unfinished have a history. All of it is recorded here, updated with each Fragment as the world expands.\n\nThe difference is that the game world is the reader's own life. The base material is real experience. And the Codex updates in real time, as the work is done."
+    body:"In game development, a lore codex is the in-world encyclopedia. The reference document that holds all the rules, history, and meaning of an entire game world. Players consult it to understand what they are moving through, what the stakes are, what everything means.\n\nThis archive has one. The Between has rules. The Great Work has stages. The Embers have a history. All of it is recorded here, updated with each Fragment as the world expands.\n\nThe difference is that the game world is the reader's own life. The base material is real experience. And the Codex updates in real time, as the work is done."
   },
 
   {
-    id:"materia", glyph:"🌪️", title:"Prima Materia",
+    id:"materia", glyph:"⚗️", title:"Prima Materia",
     subtitle:"Raw Material of the Great Work", locked:false,
-    body:"Prima Materia is what the alchemist brings to the Work. Not perfection. Not readiness. Raw material gathered through lived experience.\n\nIn this grimoire, Prima Materia is earned by completing IRL Quests. One per quest, five per Fragment. That is the record that you went out into the world and did the thing.\n\nPrima Materia accumulates across all Fragments. It never resets. Missing a Fragment does not erase what came before. Someone who joins at Fragment VI simply begins their record at Fragment VI. There is no catching up because there is no race.\n\nPrima Materia is not currency. It cannot be traded. What it does is mark the record. The total at the end of the year is proof of how many times the Unfinished showed up and brought something real.\n\nThe grimoire does not reward performance. It rewards presence."
+    body:"Prima Materia is what the alchemist brings to the Work. Not perfection. Not readiness. Raw material gathered through lived experience.\n\nIn this grimoire, Prima Materia is earned by completing IRL Quests. One per quest, five per Fragment. That is the record that you went out into the world and did the thing.\n\nPrima Materia accumulates across all Fragments. It never resets. Missing a Fragment does not erase what came before. Someone who joins at Fragment VI simply begins their record at Fragment VI. There is no catching up because there is no race.\n\nPrima Materia is not currency. It cannot be traded. What it does is mark the record. The total at the end of the year is proof of how many times the Embers showed up and brought something real.\n\nThe grimoire does not reward performance. It rewards presence."
   },
   // ── FUTURE ENTRIES: add new world entries here as the year progresses ──
   // { id:"", glyph:"", title:"", subtitle:"", locked:true, body:"" },
