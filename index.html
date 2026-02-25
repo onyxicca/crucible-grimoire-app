@@ -663,7 +663,7 @@ const WORLD_ENTRIES = [
   },
   {
     id:"unfinished", glyph:"🔥", title:"The Embers",
-    subtitle:"Shaped by the Crucible", locked:false,
+    subtitle:"Those Shaped by the Crucible", locked:false,
     body:"Those who enter the Crucible knowingly are called the Embers. Not as metaphor. As title.\n\nEmbers are not ash and they are not flame. They are the in-between state. Still burning. Not yet blazing. Formed by heat, not destroyed by it.\n\nThe Embers have chosen to move without certainty, to speak before resolution, to build without knowing the final shape. They have accepted that the middle counts. That showing up inside the heat is the Work itself.\n\nIf you are here, you are one of them."
   },
   {
@@ -682,8 +682,8 @@ const WORLD_ENTRIES = [
     body:"In classical alchemy, the Magnum Opus was the process of transmuting base material into its highest form. It moved through 3 phases and 7 stages. It was never fast. It required heat, patience, and the willingness to stay present through each stage without skipping ahead.\n\nThe three phases are Nigredo (dissolution and burning away), Albedo (purification and reflection), and Rubedo (integration and completion).\n\nThe seven stages are Calcination, Dissolution, Separation, Conjunction, Fermentation, Distillation, and Coagulation.\n\nThe Great Work of this archive moves through those same phases across the full year of Fragments. Each Fragment is assigned to a specific stage. Together they form a complete system for transmuting the chaos of the Between into something real."
   },
   {
-    id:"flasks", glyph:"🧪", title:"The Flasks",
-    subtitle:"The flasks that replenish Flow", locked:false,
+    id:"flasks", glyph:"🧪", title:"Flowing Vigor & Focus",
+    subtitle:"The vessels that carry Flow", locked:false,
     body:"The Embers carry two vessels through the Between.\n\nThe Flask of Flowing Focus carries mental Flow, the kind spent on sustained concentration, creative work, and long engagement with difficult ideas. The liquid within does not force alertness. It preserves flow over time, allowing thought to remain stable when clarity is most at risk of slipping.\n\nThe Flask of Flowing Vigor carries physical Flow, the kind spent in sustained effort and the long exertion of showing up when it costs something. Unlike remedies for moments of crisis, this flask is used to maintain the body through continued action, when recovery must happen alongside the work rather than after it.\n\nBoth flasks appear in this archive as real objects. Their purpose in the world of the Between is the same as their purpose in the world one actually inhabits."
   },
   {
@@ -1021,7 +1021,7 @@ function buildQuests(){
 
     card.innerHTML=`
       <div class="quest-card-header" onclick="toggleQuest('${fragId}',${qi})">
-        <div class="quest-status-ring" id="qring-${fragId}-${qi}">${isComplete?'✓':''}</div>
+        <div class="quest-status-ring" id="qring-${fragId}-${qi}">${isComplete?'&#10003;':''}</div>
         <div class="quest-card-title-wrap">
           <div class="quest-card-name">${q.name}</div>
           <div class="quest-materia-badge">${isComplete?'🪔 Materia gathered':'◇ Awaiting completion'}</div>
@@ -1035,7 +1035,7 @@ function buildQuests(){
         <div class="quest-rwd-lbl2">Reward</div>
         <div class="quest-rwd-text">${q.reward}</div>
         <div class="quest-actions">
-          <div class="quest-complete-btn" onclick="completeQuest('${fragId}',${qi})">${isComplete?'✓ Completed':'Mark Complete'}</div>
+          <div class="quest-complete-btn" onclick="completeQuest('${fragId}',${qi})">${isComplete?'&#10003; Completed':'Mark Complete'}</div>
           <div class="materia-earned${isComplete?' lit':''}">${isComplete?'🪔 +1 Materia':''}</div>
         </div>
       </div>`;
