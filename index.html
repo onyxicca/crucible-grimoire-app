@@ -1264,8 +1264,8 @@ function exportPDF(fragId){
 
       // Circle checkbox
       doc.setDrawColor(...RED);doc.setLineWidth(0.4);
-      doc.circle(M+5,y+2,4,"S");
-      if(done){doc.setFont("helvetica","bold");doc.setTextColor(...RED);doc.text("✓",M+2.5,y+4.5);}
+      if(done){doc.setFillColor(...RED);doc.circle(M+5,y+2,4,"FD");}
+      else{doc.setFillColor(255,255,255);doc.circle(M+5,y+2,4,"S");}
 
       // Quest name
       doc.setFontSize(9);doc.setFont("helvetica","bold");doc.setTextColor(...RED);
